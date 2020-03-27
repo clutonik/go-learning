@@ -1,12 +1,12 @@
 package main
 
 import (
-	"github.com/clutonik/go-learning/exploreConstants"
-	"github.com/clutonik/go-learning/exploreIota"
-	"github.com/clutonik/go-learning/exploreTypes"
+	"exploreConstants"
+	"exploreIota"
+	"exploreTypes"
 	"fmt"
-	"github.com/clutonik/go-learning/helloWorld"
-	"github.com/clutonik/go-learning/zeroValue"
+	"helloWorld"
+	"zeroValue"
 )
 
 func main() {
