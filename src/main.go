@@ -2,6 +2,7 @@ package main
 
 import (
 	"exploreConstants"
+	"exploreIota"
 	"exploreTypes"
 	"fmt"
 	"helloWorld"
@@ -23,6 +24,10 @@ func main() {
 
 	// Explore constants
 	exploreConstants.PrintConstants()
+	fmt.Println("---------------------------")
+
+	// Explore iota
+	exploreIota.PrintIota()
 	fmt.Println("---------------------------")
 
 }
