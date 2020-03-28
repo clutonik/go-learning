@@ -4,6 +4,7 @@ import (
 	"exploreConditionals"
 	"exploreConstants"
 	"exploreIota"
+	"exploreLoops"
 	"exploreTypes"
 	"fmt"
 	"helloWorld"
@@ -33,6 +34,10 @@ func main() {
 
 	// Explore Conditionals
 	exploreConditionals.PrintConditionals()
+	fmt.Println("---------------------------")
+
+	// Explore Loops
+	exploreLoops.PrintLoops()
 	fmt.Println("---------------------------")
 
 }
