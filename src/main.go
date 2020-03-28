@@ -1,6 +1,7 @@
 package main
 
 import (
+	"exploreConditionals"
 	"exploreConstants"
 	"exploreIota"
 	"exploreTypes"
@@ -28,6 +29,10 @@ func main() {
 
 	// Explore iota
 	exploreIota.PrintIota()
+	fmt.Println("---------------------------")
+
+	// Explore Conditionals
+	exploreConditionals.PrintConditionals()
 	fmt.Println("---------------------------")
 
 }
