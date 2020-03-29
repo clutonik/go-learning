@@ -5,6 +5,7 @@ import (
 	"exploreConstants"
 	"exploreIota"
 	"exploreLoops"
+	"exploreSlices"
 	"exploreTypes"
 	"fmt"
 	"helloWorld"
@@ -40,4 +41,7 @@ func main() {
 	exploreLoops.PrintLoops()
 	fmt.Println("---------------------------")
 
+	// Explore Slices
+	exploreSlices.PrintSlices()
+	fmt.Println("---------------------------")
 }
