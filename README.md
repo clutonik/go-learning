@@ -1,5 +1,5 @@
 # go-learning
-Repository to learn go-programming. 
+Repository to learn go-programming. The code in this repository is divided in multiple packages and has been imported to the main package (main.go) in src directory.
 
 ## Topics Covered:
 * Code to print hello-world (the very basic stuff for any new language we learn)
