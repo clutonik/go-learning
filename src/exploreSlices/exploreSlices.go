@@ -53,7 +53,13 @@ func PrintSlices() {
 	fmt.Println("Length of slice created using make: ", len(a))
 	fmt.Println("Capacity of slice created using make: ", cap(a)) // If we reach the capacity of 100, runtime will create a new array with double capacity and will get rid of old array
 
-    // Multi-dimensional Slice
-    mds := [][]int{x,y}
-    fmt.Println("Multi-dimensional slice: ", mds)
+	// Multi-dimensional Slice
+	mds := [][]int{x, y}
+	fmt.Println("Multi-dimensional slice: ", mds)
+
+	// Looping over slice elements
+	fmt.Println("Looping over slice elements...")
+	for i, v := range mds {
+		fmt.Printf("Index: %d, Value: %d", i, v)
+	}
 }
