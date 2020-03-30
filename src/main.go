@@ -11,6 +11,7 @@ import (
 	"exploreTypes"
 	"fmt"
 	"helloWorld"
+	"tricks"
 	"zeroValue"
 )
 
@@ -53,5 +54,9 @@ func main() {
 
 	// Explore Maps
 	exploreStructs.PrintStructs()
+	fmt.Println("---------------------------")
+
+	// Exploring Tricks
+	tricks.PrintTricks()
 	fmt.Println("---------------------------")
 }
