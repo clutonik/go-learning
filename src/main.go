@@ -7,6 +7,7 @@ import (
 	"exploreLoops"
 	"exploreMaps"
 	"exploreSlices"
+	"exploreStructs"
 	"exploreTypes"
 	"fmt"
 	"helloWorld"
@@ -48,5 +49,9 @@ func main() {
 
 	// Explore Maps
 	exploreMaps.PrintMaps()
+	fmt.Println("---------------------------")
+
+	// Explore Maps
+	exploreStructs.PrintStructs()
 	fmt.Println("---------------------------")
 }

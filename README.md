@@ -10,3 +10,4 @@ Repository to learn go-programming. The code in this repository is divided in mu
 * Code to explore Conditional statements in Go
 * Code to explore Slices in Go (Using Arrays directly is not recommended to avoid overhead)
 * Code to explore maps in Go.
+* Code to explore Structs in Go. 
