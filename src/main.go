@@ -3,6 +3,7 @@ package main
 import (
 	"exploreConditionals"
 	"exploreConstants"
+	"exploreFunctions"
 	"exploreIota"
 	"exploreLoops"
 	"exploreMaps"
@@ -54,6 +55,10 @@ func main() {
 
 	// Explore Maps
 	exploreStructs.PrintStructs()
+	fmt.Println("---------------------------")
+
+	// Explore Functions
+	exploreFunctions.PrintFunctions()
 	fmt.Println("---------------------------")
 
 	// Exploring Tricks
