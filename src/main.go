@@ -10,6 +10,7 @@ import (
 	"exploreSlices"
 	"exploreStructs"
 	"exploreTypes"
+	"exploremethods"
 	"fmt"
 	"helloWorld"
 	"tricks"
@@ -59,6 +60,10 @@ func main() {
 
 	// Explore Functions
 	exploreFunctions.PrintFunctions()
+	fmt.Println("---------------------------")
+
+	// Explore Functions
+	exploremethods.PrintMethods()
 	fmt.Println("---------------------------")
 
 	// Exploring Tricks
