@@ -1,20 +1,20 @@
 package main
 
 import (
-	conditionals "Conditionals"
-	constants "Constants"
-	functions "Functions"
-	loops "Loops"
-	maps "Maps"
-	slices "Slices"
-	structs "Structs"
+	"conditionals"
+	"constants"
 	"fmt"
-	helloworld "helloWorld"
+	"functions"
+	"helloworld"
 	"interfaces"
 	"iotas"
+	"loops"
+	"maps"
+	"slices"
+	"structs"
 	"tricks"
 	"types"
-	zerovalue "zeroValue"
+	"zerovalue"
 )
 
 func main() {
