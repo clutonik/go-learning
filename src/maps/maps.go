@@ -1,10 +1,11 @@
-package exploreMaps
+package maps
 
 import (
 	"fmt"
 )
 
-func PrintMaps() {
+// Print explores maps in Go
+func Print() {
 	fmt.Println("Exploring Maps: ")
 
 	// Declaring Map

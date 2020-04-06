@@ -1,4 +1,4 @@
-package exploreIota
+package iotas
 
 import (
 	"fmt"
@@ -11,7 +11,8 @@ const (
 	c = 1 << (iota * 2) // iota = 3, multiplying iota by 2 and using bitwise left shift
 )
 
-func PrintIota() {
+// Print explores iotas in Go
+func Print() {
 	fmt.Println("First iota: ", a)
 	fmt.Println("Second iota: ", b)
 	fmt.Println("Third iota: ", c)

@@ -1,4 +1,4 @@
-package exploremethods
+package methods
 
 import (
 	"fmt"
@@ -14,8 +14,8 @@ func (l language) speak() {
 	fmt.Printf("\t%s is spoken in %s\n", l.name, l.country) // Accessing fields of type language
 }
 
-// PrintMethods demonstrates use of methods
-func PrintMethods() {
+// Print demonstrates use of methods
+func Print() {
 
 	fmt.Println("Exploring Methods: ")
 	lang1 := language{

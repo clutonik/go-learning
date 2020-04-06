@@ -1,4 +1,4 @@
-package exploreStructs
+package structs
 
 import (
 	"fmt"
@@ -15,7 +15,8 @@ type nativeLanguage struct {
 	native bool
 }
 
-func PrintStructs() {
+// Print explores Structs in Go
+func Print() {
 
 	fmt.Println("Exploring Structs: ")
 

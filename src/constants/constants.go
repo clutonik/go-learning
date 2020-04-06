@@ -1,4 +1,4 @@
-package exploreConstants
+package constants
 
 import (
 	"fmt"
@@ -16,7 +16,8 @@ const d = 32
 const e = 34.4
 const f = "Both ways work"
 
-func PrintConstants() {
+// Print explores constants in Go
+func Print() {
 	fmt.Println("Constant from first set: ", a)
 	fmt.Println("Constant from second set: ", d)
 }

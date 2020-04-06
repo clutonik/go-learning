@@ -1,10 +1,11 @@
-package exploreSlices
+package slices
 
 import (
 	"fmt"
 )
 
-func PrintSlices() {
+// Print explores Slices in Go
+func Print() {
 	// Composite Literals/Slices
 	x := []int{1, 4, 6, 42, 56, 77}
 	fmt.Println("Exploring Slices:: ")

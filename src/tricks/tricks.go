@@ -7,7 +7,8 @@ import (
 // Declaring two variables
 var x, y int
 
-func PrintTricks() {
+// Print explores tricks I learned in Go
+func Print() {
 	fmt.Println("Code samples demonstrating few tricks: ")
 	x, y = 42, 44 // Assigning values to two variables at the same time
 

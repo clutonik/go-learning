@@ -1,10 +1,11 @@
-package exploreFunctions
+package functions
 
 import (
 	"fmt"
 )
 
-func PrintFunctions() {
+// Print explores functions in go
+func Print() {
 	fmt.Println("Exploring Functions...")
 	basicFunction()                    // basic function with a print statement
 	defer basicFunction()              // basic function again with defer to execute it at the end

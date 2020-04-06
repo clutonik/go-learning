@@ -1,65 +1,65 @@
 package main
 
 import (
-	"exploreConditionals"
-	"exploreConstants"
-	"exploreFunctions"
-	"exploreIota"
-	"exploreLoops"
-	"exploreMaps"
-	"exploreSlices"
-	"exploreStructs"
-	"exploreTypes"
+	conditionals "Conditionals"
+	constants "Constants"
+	functions "Functions"
+	loops "Loops"
+	maps "Maps"
+	slices "Slices"
+	structs "Structs"
 	"fmt"
-	"helloWorld"
+	helloworld "helloWorld"
 	"interfaces"
+	"iotas"
 	"tricks"
-	"zeroValue"
+	"types"
+	zerovalue "zeroValue"
 )
 
 func main() {
 	// Use helloWorld package to say Hello
-	helloWorld.SayHello()
+	helloworld.Print()
 	fmt.Println("---------------------------")
 
 	// Use zeroValue package to print default values for types
-	zeroValue.ZeroValue()
+	zerovalue.Print()
 	fmt.Println("---------------------------")
 
 	// Explore type printing using fmt
-	exploreTypes.PrintTypes()
+	types.Print()
 	fmt.Println("---------------------------")
 
 	// Explore constants
-	exploreConstants.PrintConstants()
+	constants.Print()
 	fmt.Println("---------------------------")
 
 	// Explore iota
-	exploreIota.PrintIota()
+	iotas.Print()
 	fmt.Println("---------------------------")
 
 	// Explore Conditionals
-	exploreConditionals.PrintConditionals()
+	conditionals.Print()
 	fmt.Println("---------------------------")
 
 	// Explore Loops
-	exploreLoops.PrintLoops()
+	loops.Print()
 	fmt.Println("---------------------------")
 
 	// Explore Slices
-	exploreSlices.PrintSlices()
+	slices.Print()
 	fmt.Println("---------------------------")
 
 	// Explore Maps
-	exploreMaps.PrintMaps()
+	maps.Print()
 	fmt.Println("---------------------------")
 
-	// Explore Maps
-	exploreStructs.PrintStructs()
+	// Explore Structs
+	structs.Print()
 	fmt.Println("---------------------------")
 
 	// Explore Functions
-	exploreFunctions.PrintFunctions()
+	functions.Print()
 	fmt.Println("---------------------------")
 
 	// Explore Functions
@@ -67,6 +67,6 @@ func main() {
 	fmt.Println("---------------------------")
 
 	// Exploring Tricks
-	tricks.PrintTricks()
+	tricks.Print()
 	fmt.Println("---------------------------")
 }

@@ -1,10 +1,11 @@
-package exploreLoops
+package loops
 
 import (
 	"fmt"
 )
 
-func PrintLoops() {
+// Print explores Loops in Go
+func Print() {
 	fmt.Println("Exploring Loops: ")
 
 	x := 1
@@ -23,8 +24,8 @@ func PrintLoops() {
 
 	// for without condition
 	for {
-		fmt.Println("for loop without condition.")	
-        break
+		fmt.Println("for loop without condition.")
+		break
 	}
 
 }
