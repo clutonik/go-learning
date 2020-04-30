@@ -23,6 +23,19 @@ func Print() {
 	xi := []int{1, 2, 3, 4, 5, 6}
 	sum = variadicFunction(xi...)
 	fmt.Printf("\tSum using variadic function(passing slice): %d\n", sum)
+
+	// Anonymous Function
+	func(x int) {
+		fmt.Printf("\tPassed in value to anonymous function is: %d\n", x)
+	}(10)
+
+	// Func expressions
+	fe := func(name string) {
+		fmt.Printf("\tName passed in to func expression: %s\n", name)
+	}
+
+	// Calling the function declared earlier
+	fe("Clutonik")
 }
 
 // Function Signature

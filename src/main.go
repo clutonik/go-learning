@@ -8,6 +8,7 @@ import (
 	"helloworld"
 	"interfaces"
 	"iotas"
+	"json"
 	"loops"
 	"maps"
 	"slices"
@@ -60,6 +61,7 @@ func main() {
 
 	// Explore Functions
 	functions.Print()
+	functions.Callback()
 	fmt.Println("---------------------------")
 
 	// Explore Functions
@@ -68,5 +70,9 @@ func main() {
 
 	// Exploring Tricks
 	tricks.Print()
+	fmt.Println("---------------------------")
+
+	// Explore JSON
+	json.Printjson()
 	fmt.Println("---------------------------")
 }
