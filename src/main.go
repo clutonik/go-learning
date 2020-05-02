@@ -5,6 +5,7 @@ import (
 	"constants"
 	"fmt"
 	"functions"
+	"goruntime"
 	"helloworld"
 	"interfaces"
 	"iotas"
@@ -74,5 +75,14 @@ func main() {
 
 	// Explore JSON
 	json.Printjson()
+	fmt.Println("---------------------------")
+
+	// Go Runtime and routines
+	//fmt.Println("Showing Race Condition...")
+	//goruntime.Race()
+	fmt.Println("Avoid Race Condition using Mutex...")
+	goruntime.Mutex()
+	fmt.Println("Avoid Race Condition using Atomic package...")
+	goruntime.Atomic()
 	fmt.Println("---------------------------")
 }

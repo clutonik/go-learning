@@ -48,7 +48,7 @@ func Printjson() {
 
 	var convertedPeople []convertedPerson
 
-	// Unmarshal JSON
+	// Unmarshal JSON which points to a datastructure (pointer)
 	uerr := json.Unmarshal(bs, &convertedPeople) // Accepts slice of bytes
 	if uerr != nil {
 		fmt.Println("Error: ", uerr)
