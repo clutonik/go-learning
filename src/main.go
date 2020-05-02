@@ -84,5 +84,10 @@ func main() {
 	goruntime.Mutex()
 	fmt.Println("Avoid Race Condition using Atomic package...")
 	goruntime.Atomic()
+	fmt.Println("Showing Channels...")
+	goruntime.Channel()
+	goruntime.BufferedChannel()
+	fmt.Println("Channel Types...")
+	goruntime.ChannelTypes()
 	fmt.Println("---------------------------")
 }
