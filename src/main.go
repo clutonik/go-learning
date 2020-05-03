@@ -89,5 +89,7 @@ func main() {
 	goruntime.BufferedChannel()
 	fmt.Println("Channel Types...")
 	goruntime.ChannelTypes()
+	fmt.Println("Using Directional Channels...")
+	goruntime.DirectionalChannels()
 	fmt.Println("---------------------------")
 }

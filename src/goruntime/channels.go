@@ -32,3 +32,24 @@ func ChannelTypes() {
 	fmt.Printf("Read Channel: %T\n", readChannel)
 	fmt.Printf("Write Channel: %T\n", writeChannel)
 }
+
+// DirectionalChannels demonstrates use of directional channels in Go
+func DirectionalChannels() {
+	channel := make(chan int)
+
+	// send
+	go sendChannel(channel)
+
+	// Receive
+	receiveChannel(channel)
+
+}
+
+func sendChannel(channel chan<- int) {
+	fmt.Println("Sending int value to channel")
+	channel <- 42
+}
+
+func receiveChannel(channel <-chan int) {
+	fmt.Println("Value in Channel: ", <-channel)
+}
