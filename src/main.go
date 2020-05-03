@@ -91,5 +91,7 @@ func main() {
 	goruntime.ChannelTypes()
 	fmt.Println("Using Directional Channels...")
 	goruntime.DirectionalChannels()
+	fmt.Println("Ranging over channel to read values...")
+	goruntime.RangeAndCloseChannel()
 	fmt.Println("---------------------------")
 }

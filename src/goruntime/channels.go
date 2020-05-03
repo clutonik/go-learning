@@ -53,3 +53,21 @@ func sendChannel(channel chan<- int) {
 func receiveChannel(channel <-chan int) {
 	fmt.Println("Value in Channel: ", <-channel)
 }
+
+// RangeAndCloseChannel demonstrates ranging over channel until it is closed.
+func RangeAndCloseChannel() {
+	channel := make(chan int)
+
+	// Send values to channel
+	go func() {
+		for i := 0; i < 5; i++ {
+			channel <- i
+		}
+		close(channel)
+	}()
+
+	// Read values from Channel until it is closed
+	for v := range channel {
+		fmt.Println("Value from Channel: ", v)
+	}
+}
