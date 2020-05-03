@@ -9,6 +9,7 @@ import (
 // Mutex demonstrates race condition while using go routines
 // Use go run -race command flag while testing this.
 func Mutex() {
+	fmt.Println("Avoid Race Condition using Mutex...")
 	fmt.Println("Number of CPUs: ", runtime.NumCPU())
 	fmt.Println("Number of Go Routines: ", runtime.NumGoroutine())
 	fmt.Println("OS: ", runtime.GOOS)
