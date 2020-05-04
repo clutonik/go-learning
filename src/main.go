@@ -3,6 +3,7 @@ package main
 import (
 	"conditionals"
 	"constants"
+	"files"
 	"fmt"
 	"functions"
 	"goruntime"
@@ -63,6 +64,7 @@ func main() {
 	// Explore Functions
 	functions.Print()
 	functions.Callback()
+	functions.UseRecover()
 	fmt.Println("---------------------------")
 
 	// Explore Functions
@@ -93,4 +95,7 @@ func main() {
 	goruntime.UsingFanOut()
 	goruntime.ContextIntro()
 	fmt.Println("---------------------------")
+
+	// Working with files and demonstrating errors
+	files.WriteToNewFile()
 }
