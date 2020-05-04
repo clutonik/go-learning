@@ -2,6 +2,8 @@ package goruntime
 
 import (
 	"fmt"
+	"sync"
+	"time"
 )
 
 // Channel demonstrates use of channels in go routines
@@ -138,4 +140,140 @@ func CommaOkIdiom() {
 	// Checking value and status again after the value has been already read
 	value, ok = <-channel
 	fmt.Printf("Value: %d, Channel ok ? : %t\n", value, ok)
+}
+
+// UsingFanIn demonstrates using a dedicated channel to store
+// results
+func UsingFanIn() {
+	fmt.Println("Using a FanIn Channel to store results...")
+
+	// Initialize three channels here
+	evenChannel := make(chan int)
+	oddChannel := make(chan int)
+	fanInChannel := make(chan int) // Channel to store results
+
+	// Calling method to send values to even and odd channels
+	go sendValuesToChannels(evenChannel, oddChannel)
+
+	// Calling method to read values from two channels and storing
+	// those values in fanInChannel
+	go receiveValuesIntoFanInChannel(evenChannel, oddChannel, fanInChannel)
+
+	// Ranging over fanInChannel to read values
+	for value := range fanInChannel {
+		fmt.Println("Value from fanInChannel: ", value)
+	}
+}
+
+func sendValuesToChannels(e, o chan<- int) {
+	for i := 0; i <= 5; i++ {
+		if i%2 == 0 {
+			e <- i
+		} else {
+			o <- i
+		}
+	}
+	close(e)
+	close(o)
+}
+
+func receiveValuesIntoFanInChannel(e, o <-chan int, f chan<- int) {
+	// Using waitgroups as we need to execute go routines which should
+	// be completed before we exit this method
+	var wg sync.WaitGroup
+	wg.Add(2) // Adding to routines which we need to wait for
+
+	// Ranging over even channel
+	go func() {
+		for v := range e {
+			f <- v // Storing even values to fanIn channel
+		}
+		wg.Done()
+	}()
+
+	// Ranging over odd channel
+	go func() {
+		for v := range o {
+			f <- v // Storing Odd Values to fanIn Channel
+		}
+		wg.Done()
+	}()
+
+	wg.Wait()
+	close(f)
+}
+
+// UsingFanOut demonstrates use of FanOut process to start
+// go routines for time consuming work by reading values from
+// another channel
+func UsingFanOut() {
+	fmt.Println("Using Fan out channels...")
+
+	// Create two channels
+	sendChannel := make(chan int)
+	fanOutChannel := make(chan int)
+
+	// Send values to sendChannel
+	go populate(sendChannel)
+
+	// Fanning out work to timeConsumingFunction
+	// go useFanOutChannel(sendChannel, fanOutChannel)
+
+	go useThrottlingInFanOutChannel(sendChannel, fanOutChannel)
+
+	// Reading Values from Fan Out Channel
+	// This will return square of the values present in sendChannel
+	for value := range fanOutChannel {
+		fmt.Println("Values from Fan Out Channel: ", value)
+	}
+
+	fmt.Println("End of FanOut code block")
+
+}
+
+func populate(channel chan<- int) {
+	for i := 0; i < 5; i++ {
+		channel <- i
+	}
+	close(channel)
+}
+
+func useFanOutChannel(sendChannel <-chan int, fanOutChannel chan<- int) {
+	var wg sync.WaitGroup
+	for value := range sendChannel {
+		wg.Add(1)
+		go func(localValue int) {
+			// Call some time consuming step(function) here
+			fanOutChannel <- timeConsumingFunction(localValue)
+			wg.Done()
+		}(value)
+	}
+	wg.Wait()
+	close(fanOutChannel)
+}
+
+func useThrottlingInFanOutChannel(sendChannel <-chan int, fanOutChannel chan<- int) {
+	var wg sync.WaitGroup
+	const goroutines = 2
+	wg.Add(goroutines)
+
+	for i := 0; i < goroutines; i++ {
+		go func() {
+			for value := range sendChannel {
+				// Call some time consuming step(function) here
+				fanOutChannel <- timeConsumingFunction(value)
+			}
+			wg.Done()
+		}()
+	}
+	wg.Wait()
+	close(fanOutChannel)
+}
+
+func timeConsumingFunction(value int) int {
+	// Returing back square of passed value and adding sleep
+	// to pretend that this function takes time
+	square := value * value
+	time.Sleep(time.Microsecond)
+	return square
 }

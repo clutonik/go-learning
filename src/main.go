@@ -89,5 +89,8 @@ func main() {
 	goruntime.RangeAndCloseChannel()
 	goruntime.SelectInChannel()
 	goruntime.CommaOkIdiom()
+	goruntime.UsingFanIn()
+	goruntime.UsingFanOut()
+	goruntime.ContextIntro()
 	fmt.Println("---------------------------")
 }
