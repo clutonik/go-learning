@@ -39,5 +39,4 @@ func panicFunction(i int){
 
 	// Recursive call to panicFunction
 	panicFunction(i + 1)
-
 }

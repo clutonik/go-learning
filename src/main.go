@@ -13,6 +13,7 @@ import (
 	"json"
 	"loops"
 	"maps"
+	"myerrors"
 	"slices"
 	"structs"
 	"tricks"
@@ -98,4 +99,7 @@ func main() {
 
 	// Working with files and demonstrating errors
 	files.WriteToNewFile()
+
+	// Using Custom Errors
+	myerrors.BasicError()
 }
