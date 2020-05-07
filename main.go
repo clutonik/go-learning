@@ -1,24 +1,25 @@
 package main
 
 import (
-	"conditionals"
-	"constants"
-	"files"
 	"fmt"
-	"functions"
-	"goruntime"
-	"helloworld"
-	"interfaces"
-	"iotas"
-	"json"
-	"loops"
-	"maps"
-	"myerrors"
-	"slices"
-	"structs"
-	"tricks"
-	"types"
-	"zerovalue"
+
+	"github.com/clutonik/go-learning/conditionals"
+	"github.com/clutonik/go-learning/constants"
+	"github.com/clutonik/go-learning/files"
+	"github.com/clutonik/go-learning/functions"
+	"github.com/clutonik/go-learning/goruntime"
+	"github.com/clutonik/go-learning/helloworld"
+	"github.com/clutonik/go-learning/interfaces"
+	"github.com/clutonik/go-learning/iotas"
+	"github.com/clutonik/go-learning/json"
+	"github.com/clutonik/go-learning/loops"
+	"github.com/clutonik/go-learning/maps"
+	"github.com/clutonik/go-learning/myerrors"
+	"github.com/clutonik/go-learning/slices"
+	"github.com/clutonik/go-learning/structs"
+	"github.com/clutonik/go-learning/tricks"
+	"github.com/clutonik/go-learning/types"
+	"github.com/clutonik/go-learning/zerovalue"
 )
 
 func main() {
