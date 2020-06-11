@@ -1,6 +1,16 @@
 package tests
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
+
+// ExampleSum creates examples for docs and run them as tests
+func ExampleSum() {
+	fmt.Println(Sum(2, 3))
+	// Output:
+	// 5
+}
 
 func TestSum(t *testing.T) {
 
@@ -25,4 +35,9 @@ func TestSum(t *testing.T) {
 		}
 	}
 
+}
+func BenchmarkSum(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		Sum(2, 3)
+	}
 }
